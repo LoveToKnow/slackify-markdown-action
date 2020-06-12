@@ -1,0 +1,28 @@
+{
+  "name": "slackify-markdown-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to convert markdown into Slack's mrkdwn.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveToKnow/slackify-markdown-action.git"
+  },
+  "keywords": [
+    "Slack",
+    "markdown",
+    "mrkdwn"
+  ],
+  "author": "Joshua Coady",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoveToKnow/slackify-markdown-action/issues"
+  },
+  "homepage": "https://github.com/LoveToKnow/slackify-markdown-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "slackify-markdown": "^3.0.3"
+  }
+}
