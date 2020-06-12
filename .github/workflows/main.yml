@@ -1,0 +1,78 @@
+name: CICD
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        runs-on: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.runs-on }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Convert
+        id: convert
+        uses: ./
+        with:
+          text: |
+            # Heading 1
+
+            ## Heading 2
+
+            [Link](http://example.com)
+
+            * List Item 1
+            * List Item 2
+
+      - name: Verify
+        shell: bash
+        env:
+          ACTUAL: ${{ steps.convert.outputs.text }}
+          EXPECTED: |
+            *Heading 1*
+
+            *Heading 2*
+
+            <http://example.com|Link>
+
+            •   List Item 1
+            •   List Item 2
+        run: |
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "Actual: $ACTUAL"
+            echo "Expected: $EXPECTED"
+            exit 1
+          fi
+
+  release:
+    needs: test
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Release
+        id: release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update major version tag
+        if: steps.release.outputs.new_release_published == 'true'
+        env:
+          TAG: v${{ steps.release.outputs.new_release_major_version }}
+        run: |
+          git tag "$TAG"
+          git push origin "$TAG"
