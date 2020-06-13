@@ -74,5 +74,5 @@ jobs:
         env:
           TAG: v${{ steps.release.outputs.new_release_major_version }}
         run: |
-          git tag "$TAG"
-          git push origin "$TAG"
+          git tag --force "$TAG"
+          git push --force origin "$TAG"
