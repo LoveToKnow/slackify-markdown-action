@@ -23,6 +23,6 @@
   "homepage": "https://github.com/LoveToKnow/slackify-markdown-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
-    "slackify-markdown": "^3.0.3"
+    "slackify-markdown": "^4.3.1"
   }
 }
