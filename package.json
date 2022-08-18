@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/LoveToKnow/slackify-markdown-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.9.1",
     "slackify-markdown": "^3.0.3"
   }
 }
