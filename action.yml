@@ -9,7 +9,7 @@ outputs:
   text:
     description: 'Converted Slack mrkdwn text'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
 branding:
   icon: 'heart'
