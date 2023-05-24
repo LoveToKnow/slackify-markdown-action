@@ -1,3 +1,8 @@
+# 1.0.1 (2022-10-13)
+
+### Features
+* Updated dependencies and changed runtime from Node12 to Node16
+
 # 1.0.0 (2020-06-12)
 
 
