@@ -63,6 +63,7 @@ jobs:
         id: release
         uses: cycjimmy/semantic-release-action@v2
         with:
+          semantic_version: 19       
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
