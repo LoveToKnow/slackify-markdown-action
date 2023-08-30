@@ -39,8 +39,8 @@ jobs:
             *Heading 1*\n\n*Heading 2*\n\n<http://example.com|Link>\n\n•   List Item 1\n•   List Item 2\n
         run: |
           if [ "$ACTUAL" != "$EXPECTED" ]; then
-            echo "Actual: $ACTUAL"
-            echo "Expected: $EXPECTED"
+            echo "Actual: '$ACTUAL'"
+            echo "Expected: '$EXPECTED'"
             exit 1
           fi
 
