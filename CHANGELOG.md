@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.0.1...v1.0.2) (2023-08-30)
+
+
+### Bug Fixes
+
+* Convert the line breaks to Slack \n ([7dde611](https://github.com/LoveToKnow/slackify-markdown-action/commit/7dde6117357bfc68efd5143b23d26118a76faba8))
+
 ## [1.0.1](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.0.0...v1.0.1) (2023-08-30)
 
 
