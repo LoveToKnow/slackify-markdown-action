@@ -5,6 +5,10 @@ inputs:
   text:
     description: 'Markdown text to convert'
     required: true
+  jsonify:
+    description: 'Whether to stringify the output as a JSON string'
+    required: false
+    default: 'true'
 outputs:
   text:
     description: 'Converted Slack mrkdwn text'
