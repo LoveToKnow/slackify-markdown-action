@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.0.2...v1.1.0) (2024-06-06)
+
+
+### Features
+
+* upgrade node (v16 -> v20) ([#14](https://github.com/LoveToKnow/slackify-markdown-action/issues/14)) ([3d311d3](https://github.com/LoveToKnow/slackify-markdown-action/commit/3d311d38e31d998943f99968519a7063c85279d7))
+
 ## [1.0.2](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.0.1...v1.0.2) (2023-08-30)
 
 
