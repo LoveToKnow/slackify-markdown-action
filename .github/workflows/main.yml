@@ -35,7 +35,15 @@ jobs:
         shell: bash
         env:
           ACTUAL: ${{ steps.convert.outputs.text }}
-          EXPECTED: '*Heading 1*\n\n*Heading 2*\n\n<http://example.com|Link>\n\n•   List Item 1\n•   List Item 2\n'
+          EXPECTED: |
+            *Heading 1*
+
+            *Heading 2*
+
+            <http://example.com|Link>
+
+            •   List Item 1
+            •   List Item 2
         run: |
           if [ "$ACTUAL" != "$EXPECTED" ]; then
             echo "Actual: '$ACTUAL'"
@@ -55,7 +63,7 @@ jobs:
         id: release
         uses: cycjimmy/semantic-release-action@v2
         with:
-          semantic_version: 19       
+          semantic_version: 19
           extra_plugins: |
             @semantic-release/changelog
             @semantic-release/git
