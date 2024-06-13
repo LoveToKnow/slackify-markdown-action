@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.1.0...v1.1.1) (2024-06-13)
+
+
+### Bug Fixes
+
+* Revert breaking change on new line ([#16](https://github.com/LoveToKnow/slackify-markdown-action/issues/16)) ([f0584e4](https://github.com/LoveToKnow/slackify-markdown-action/commit/f0584e47baca90b34a36f88dbafa55dca3030381))
+
 # [1.1.0](https://github.com/LoveToKnow/slackify-markdown-action/compare/v1.0.2...v1.1.0) (2024-06-06)
 
 
